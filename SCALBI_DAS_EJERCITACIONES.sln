@@ -11,6 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TP_1", "TP_1", "{237DC5DB-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio01", "Ejercicio01\Ejercicio01.csproj", "{0E7EE8F9-37DF-4677-9471-7F455E48004E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio02", "Ejercicio02\Ejercicio02.csproj", "{502EF9D4-189F-4330-B7A0-F315A1E4C1E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UNIDAD_3", "UNIDAD_3", "{158C162A-6018-48B0-AEAB-4D9D04987DAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UNIDAD_4", "UNIDAD_4", "{BD022EB9-EFCC-424C-B558-7EE6730CC9D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UNIDAD_5", "UNIDAD_5", "{E035CCE1-CF82-4AE1-B96B-CD5C9C71B2C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{D107F4C8-89CC-BEA8-D3D7-CA6B7733353D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +34,10 @@ Global
 		{0E7EE8F9-37DF-4677-9471-7F455E48004E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7EE8F9-37DF-4677-9471-7F455E48004E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7EE8F9-37DF-4677-9471-7F455E48004E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{502EF9D4-189F-4330-B7A0-F315A1E4C1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502EF9D4-189F-4330-B7A0-F315A1E4C1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502EF9D4-189F-4330-B7A0-F315A1E4C1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{502EF9D4-189F-4330-B7A0-F315A1E4C1E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -28,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{237DC5DB-7D3F-4A68-894C-900AFD1ABA38} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{0E7EE8F9-37DF-4677-9471-7F455E48004E} = {237DC5DB-7D3F-4A68-894C-900AFD1ABA38}
+		{502EF9D4-189F-4330-B7A0-F315A1E4C1E7} = {237DC5DB-7D3F-4A68-894C-900AFD1ABA38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E71C0722-717B-4704-9045-E80A44FEC267}
