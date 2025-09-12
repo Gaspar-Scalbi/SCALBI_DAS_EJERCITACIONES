@@ -38,7 +38,7 @@ namespace CRUD_SQL_DATASET
             }
         }
 
-  
+
         private int? ObtenerId()
         {
             try
@@ -59,11 +59,17 @@ namespace CRUD_SQL_DATASET
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             int? id = ObtenerId();
-            if (id != null) {
+            if (id != null)
+            {
                 bdCrudTableAdapters.PersonaTableAdapter TableAdapter = new bdCrudTableAdapters.PersonaTableAdapter();
                 TableAdapter.EliminarPersona((int)id);
                 Refrescar();
             }
+        }
+
+        private void TABLA_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
