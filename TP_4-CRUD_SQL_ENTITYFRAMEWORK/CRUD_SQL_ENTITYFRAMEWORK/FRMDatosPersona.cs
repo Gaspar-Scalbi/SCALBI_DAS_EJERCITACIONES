@@ -66,13 +66,13 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
 
             if (persona.Nacimiento.HasValue)
             {
-                dtpDatosPersona.Value = persona.Nacimiento.Value; // DateTime (no-nullable)
-                dtpDatosPersona.Checked = true;                   // “tildado” = hay fecha
+                dtpDatosPersona.Value = persona.Nacimiento.Value; 
+                dtpDatosPersona.Checked = true;                   
             }
             else
             {
-                dtpDatosPersona.Value = DateTime.Today;           // valor dummy
-                dtpDatosPersona.Checked = false;                  // “destildado” = NULL
+                dtpDatosPersona.Value = DateTime.Today;           
+                dtpDatosPersona.Checked = false;                  
             }
         }
     }
