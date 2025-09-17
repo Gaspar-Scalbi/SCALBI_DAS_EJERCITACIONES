@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CRUD_SQL_ENTITYFRAMEWORK.Models;
 
-[Table("PersonasEF")]
-public partial class PersonasEf
+[Table("PersonaEF")]
+public partial class PersonaEf
 {
     [Key]
     [Column("id")]

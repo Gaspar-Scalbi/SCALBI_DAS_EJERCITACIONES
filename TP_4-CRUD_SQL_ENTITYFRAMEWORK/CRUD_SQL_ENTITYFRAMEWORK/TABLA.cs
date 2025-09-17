@@ -6,7 +6,7 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
 {
     public partial class TABLA : Form
     {
-        private readonly PersonasEfContext personaDB = new();
+        private readonly PersonaEfContext personaDB = new();
 
         public TABLA()
         {
@@ -15,10 +15,10 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
 
         private async void TABLA_Load(object sender, EventArgs e)
         {
-            using var db = new PersonasEfContext();              // <- equivalente a CrudEntities
-            var datos = await db.PersonasEfs                      // DbSet generado por el scaffold
+            using var db = new PersonaEfContext();              // <- equivalente a CrudEntities
+            var datos = await db.PersonaEfs                      // DbSet generado por el scaffold
                 .AsNoTracking()
-                .OrderBy(p => p.Nombre)
+                .OrderBy(p => p.Id)
                 .ToListAsync();
             dgvTabla.DataSource = datos;
             dgvTabla.Columns["Nacimiento"].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -33,8 +33,8 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
         #region HELPER
         private void Refrescar()
         {
-            using var db = new PersonasEfContext();              // <- equivalente a CrudEntities
-            var datos = db.PersonasEfs                           // DbSet generado por el scaffold
+            using var db = new PersonaEfContext();              // <- equivalente a CrudEntities
+            var datos = db.PersonaEfs                           // DbSet generado por el scaffold
                 .AsNoTracking()
                 .OrderByDescending(p => p.Id)
                 .ToList();
@@ -56,7 +56,7 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
             if (dgvTabla.CurrentRow != null)
             {
                 int id = (int)dgvTabla.CurrentRow.Cells["Id"].Value;
-                var persona = personaDB.PersonasEfs.Find(id);
+                var persona = personaDB.PersonaEfs.Find(id);
                 if (persona != null)
                 {
                     FRMDatosPersona frmPersona = new FRMDatosPersona(id);
@@ -71,13 +71,13 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
             if (dgvTabla.CurrentRow != null)
             {
                 int id = (int)dgvTabla.CurrentRow.Cells["Id"].Value;
-                var persona = personaDB.PersonasEfs.Find(id);
+                var persona = personaDB.PersonaEfs.Find(id);
                 if (persona != null)
                 {
                     var confirmResult = MessageBox.Show("¿Estás seguro de eliminar a " + persona.Nombre + "?", "Confirmar eliminación", MessageBoxButtons.YesNo);
                     if (confirmResult == DialogResult.Yes)
                     {
-                        personaDB.PersonasEfs.Remove(persona);
+                        personaDB.PersonaEfs.Remove(persona);
                         personaDB.SaveChanges();
                         Refrescar();
                     }
