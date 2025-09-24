@@ -33,21 +33,21 @@
             btnAgregarAvion = new Button();
             btnEliminarAvion = new Button();
             btnModificarAvion = new Button();
-            dgvTabla = new DataGridView();
+            dgvTablaAviones = new DataGridView();
             btnAgregarPasajero = new Button();
             btnEliminarPasajero = new Button();
             btnModificarPasajero = new Button();
-            dataGridView1 = new DataGridView();
+            dgvTablaPasajeros = new DataGridView();
             btnAgregarPasaje = new Button();
             btnEliminarPasaje = new Button();
             btnModificarPasaje = new Button();
-            dataGridView2 = new DataGridView();
+            dgvTablaPasajes = new DataGridView();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvTabla).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTablaAviones).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTablaPasajeros).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTablaPasajes).BeginInit();
             SuspendLayout();
             // 
             // btnSalir
@@ -60,6 +60,7 @@
             btnSalir.TabIndex = 11;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // label1
             // 
@@ -102,18 +103,18 @@
             btnModificarAvion.Text = "Modificar";
             btnModificarAvion.UseVisualStyleBackColor = true;
             // 
-            // dgvTabla
+            // dgvTablaAviones
             // 
-            dgvTabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvTabla.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvTabla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTabla.Location = new Point(100, 114);
-            dgvTabla.Margin = new Padding(2);
-            dgvTabla.Name = "dgvTabla";
-            dgvTabla.RowHeadersWidth = 62;
-            dgvTabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTabla.Size = new Size(265, 169);
-            dgvTabla.TabIndex = 6;
+            dgvTablaAviones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvTablaAviones.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTablaAviones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTablaAviones.Location = new Point(100, 114);
+            dgvTablaAviones.Margin = new Padding(2);
+            dgvTablaAviones.Name = "dgvTablaAviones";
+            dgvTablaAviones.RowHeadersWidth = 62;
+            dgvTablaAviones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTablaAviones.Size = new Size(265, 169);
+            dgvTablaAviones.TabIndex = 6;
             // 
             // btnAgregarPasajero
             // 
@@ -145,18 +146,18 @@
             btnModificarPasajero.Text = "Modificar";
             btnModificarPasajero.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvTablaPasajeros
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(530, 114);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(265, 169);
-            dataGridView1.TabIndex = 12;
+            dgvTablaPasajeros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvTablaPasajeros.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTablaPasajeros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTablaPasajeros.Location = new Point(530, 114);
+            dgvTablaPasajeros.Margin = new Padding(2);
+            dgvTablaPasajeros.Name = "dgvTablaPasajeros";
+            dgvTablaPasajeros.RowHeadersWidth = 62;
+            dgvTablaPasajeros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTablaPasajeros.Size = new Size(265, 169);
+            dgvTablaPasajeros.TabIndex = 12;
             // 
             // btnAgregarPasaje
             // 
@@ -188,18 +189,18 @@
             btnModificarPasaje.Text = "Modificar";
             btnModificarPasaje.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvTablaPasajes
             // 
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(916, 114);
-            dataGridView2.Margin = new Padding(2);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView2.Size = new Size(265, 169);
-            dataGridView2.TabIndex = 16;
+            dgvTablaPasajes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvTablaPasajes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTablaPasajes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTablaPasajes.Location = new Point(916, 114);
+            dgvTablaPasajes.Margin = new Padding(2);
+            dgvTablaPasajes.Name = "dgvTablaPasajes";
+            dgvTablaPasajes.RowHeadersWidth = 62;
+            dgvTablaPasajes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTablaPasajes.Size = new Size(265, 169);
+            dgvTablaPasajes.TabIndex = 16;
             // 
             // label2
             // 
@@ -245,22 +246,22 @@
             Controls.Add(btnAgregarPasaje);
             Controls.Add(btnEliminarPasaje);
             Controls.Add(btnModificarPasaje);
-            Controls.Add(dataGridView2);
+            Controls.Add(dgvTablaPasajes);
             Controls.Add(btnAgregarPasajero);
             Controls.Add(btnEliminarPasajero);
             Controls.Add(btnModificarPasajero);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvTablaPasajeros);
             Controls.Add(btnSalir);
             Controls.Add(label1);
             Controls.Add(btnAgregarAvion);
             Controls.Add(btnEliminarAvion);
             Controls.Add(btnModificarAvion);
-            Controls.Add(dgvTabla);
+            Controls.Add(dgvTablaAviones);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dgvTabla).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTablaAviones).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTablaPasajeros).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTablaPasajes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -272,15 +273,15 @@
         private Button btnAgregarAvion;
         private Button btnEliminarAvion;
         private Button btnModificarAvion;
-        private DataGridView dgvTabla;
+        private DataGridView dgvTablaAviones;
         private Button btnAgregarPasajero;
         private Button btnEliminarPasajero;
         private Button btnModificarPasajero;
-        private DataGridView dataGridView1;
+        private DataGridView dgvTablaPasajeros;
         private Button btnAgregarPasaje;
         private Button btnEliminarPasaje;
         private Button btnModificarPasaje;
-        private DataGridView dataGridView2;
+        private DataGridView dgvTablaPasajes;
         private Label label2;
         private Label label3;
         private Label label4;
