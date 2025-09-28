@@ -34,20 +34,20 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
         }
         private void AgregarPersona()
         {
-            using var db = new PersonasEfContext();
-            var nuevaPersona = new PersonasEf
+            using var db = new PersonaEfContext();
+            var nuevaPersona = new PersonaEf
             {
                 Nombre = txtnombre.Text.Trim(),
                 Nacimiento = dtpDatosPersona.Value
             };
-            db.PersonasEfs.Add(nuevaPersona);
+            db.PersonaEfs.Add(nuevaPersona);
             db.SaveChanges();
             this.Close();
         }
         private void ModificarPersona()
         {
-            using var db = new PersonasEfContext();
-            var persona = db.PersonasEfs.Find(id);
+            using var db = new PersonaEfContext();
+            var persona = db.PersonaEfs.Find(id);
             if (persona != null)
             {
                 persona.Nombre = txtnombre.Text.Trim();
@@ -58,8 +58,8 @@ namespace CRUD_SQL_ENTITYFRAMEWORK
         }
         private void CargarDatos()
         {
-            using var db = new PersonasEfContext();
-            var persona = db.PersonasEfs.AsNoTracking().FirstOrDefault(p => p.Id == id);
+            using var db = new PersonaEfContext();
+            var persona = db.PersonaEfs.AsNoTracking().FirstOrDefault(p => p.Id == id);
             if (persona is null) return;
 
             txtnombre.Text = persona.Nombre ?? string.Empty;
