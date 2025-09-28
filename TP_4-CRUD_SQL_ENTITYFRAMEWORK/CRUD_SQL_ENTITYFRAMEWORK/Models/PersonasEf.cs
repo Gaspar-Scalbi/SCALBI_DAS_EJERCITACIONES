@@ -21,3 +21,4 @@ public partial class PersonasEf
     [Column("nacimiento", TypeName = "datetime")]
     public DateTime? Nacimiento { get; set; }
 }
+

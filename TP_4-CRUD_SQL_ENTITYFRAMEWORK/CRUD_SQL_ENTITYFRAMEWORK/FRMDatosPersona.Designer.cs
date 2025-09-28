@@ -92,6 +92,7 @@
             Controls.Add(btnGuardar);
             Controls.Add(txtnombre);
             Name = "FRMDatosPersona";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FRMDatosPersona";
             ResumeLayout(false);
             PerformLayout();
